@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #2d2925;
+    background: #f4eee3;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fffaf0 0%,
+            #f4eee3 55%,
+            #e8ddce 100%
+        );
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #4a3b32;
+    color: #fffaf0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a:hover {
+    color: #d9aeb2;
+}
+
+.nav-links button {
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 250, 240, 0.4);
+
+    background: transparent;
+    color: #fffaf0;
+}
+
+/* AUTH */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.auth-page h1 {
+    margin: 0;
+
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: italic;
+
+    color: #4a3b32;
+}
+
+.auth-page > p {
+    color: #7d746a;
+}
+
+.auth-page form {
+    width: min(400px, 100%);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 25px 0 10px;
+
+    padding: 30px;
+
+    background: #fffaf0;
+
+    border: 1px solid #d8c9b8;
+
+    box-shadow:
+        0 12px 35px rgba(74, 59, 50, 0.1);
+}
+
+.auth-page input {
+    padding: 13px;
+
+    border: 1px solid #d8c9b8;
+
+    background: #faf5eb;
+
+    outline: none;
+}
+
+.auth-page input:focus {
+    border-color: #9b5c63;
+}
+
+.auth-page button,
+.create-post button,
+.comment-form button,
+.user-card button {
+    padding: 11px 18px;
+
+    border: none;
+
+    background: #4a3b32;
+    color: #fffaf0;
+}
+
+.auth-page button:hover,
+.create-post button:hover,
+.comment-form button:hover,
+.user-card button:hover {
+    background: #9b5c63;
+}
+
+.error {
+    margin: 0;
+    color: #9b4148;
+}
+
+/* GENERAL */
+
+.feed,
+.page,
+.profile-page {
+    width: min(700px, 92%);
+
+    margin: 40px auto;
+}
+
+.feed h1,
+.page h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* CREATE POST */
+
+.create-post {
+    padding: 20px;
+
+    background: #fffaf0;
+
+    border: 1px solid #d8c9b8;
+}
+
+.create-post textarea {
+    width: 100%;
+    min-height: 90px;
+
+    resize: vertical;
+
+    padding: 12px;
+
+    border: 1px solid #d8c9b8;
+
+    background: #faf5eb;
+
+    outline: none;
+}
+
+.create-post button {
+    margin-top: 10px;
+}
+
+/* POSTS */
+
+.posts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.post-card {
+    padding: 20px;
+
+    background: #fffaf0;
+
+    border: 1px solid #d8c9b8;
+
+    box-shadow:
+        0 5px 18px rgba(74, 59, 50, 0.06);
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.avatar,
+.profile-avatar {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #d8c5ad;
+
+    color: #4a3b2d;
+
+    font-weight: bold;
+}
+
+.avatar img,
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.post-content {
+    margin: 20px 0;
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+/* POST ACTIONS */
+
+.post-actions {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-top: 1px solid #e5d9cc;
+    border-bottom: 1px solid #e5d9cc;
+}
+
+.post-actions button {
+    border: none;
+
+    background: transparent;
+
+    color: #9b5c63;
+}
+
+/* COMMENTS */
+
+.comments {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.comment {
+    padding: 8px 10px;
+
+    background: #f4eee3;
+}
+
+.comment strong {
+    margin-right: 8px;
+}
+
+.comment-form {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.comment-form input {
+    min-width: 0;
+    flex: 1;
+
+    padding: 9px;
+
+    border: 1px solid #d8c9b8;
+
+    background: #faf5eb;
+}
+
+/* USERS */
+
+.users {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: #fffaf0;
+
+    border: 1px solid #d8c9b8;
+}
+
+.user-card-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.user-card-info span {
+    color: #7d746a;
+    font-size: 0.85rem;
+}
+
+.user-card button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* PROFILE */
+
+.profile-header {
+    text-align: center;
+
+    padding: 35px;
+
+    background: #fffaf0;
+
+    border: 1px solid #d8c9b8;
+}
+
+.profile-header .profile-avatar {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 15px;
+
+    font-size: 1.5rem;
+}
+
+.profile-header h1 {
+    margin: 5px 0;
+
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.profile-header p {
+    color: #7d746a;
+}
+
+.profile-header span {
+    color: #9b5c63;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+
+    .nav-links button {
+        padding: 6px 9px;
+    }
+
+    .feed,
+    .page,
+    .profile-page {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .auth-page h1 {
+        font-size: 3rem;
+    }
+
+    .comment-form {
+        flex-direction: column;
+    }
+}
