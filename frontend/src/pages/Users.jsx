@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar";
 import UserCard from "../components/UserCard";
 import { apiRequest } from "../api/api";
 
